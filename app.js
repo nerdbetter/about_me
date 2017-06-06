@@ -46,3 +46,11 @@ else{
 }
 
 var question_five = prompt('Have I always been this good looking?');
+if (question_five.toLowerCase() === 'yes'){
+  console.log('user answered correctly ' + question_five );
+  alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+}
+else{
+  console.log('user answered incorrectly ' + question_five + ', advised history.');
+  alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+}
