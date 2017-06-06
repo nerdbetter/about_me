@@ -9,9 +9,12 @@ if (question_one.toLowerCase() === 'yes'){
   console.log('user answered correctly ' + question_one );
   alert('How did you know? I would love to get the opportunity to go again.');
 }
-else {
+else if (question_one.toLowerCase() === 'no'){
   console.log('user ansered incorrectly ' + question_one + ', advised history.');
   alert('When I was eighteen I decided instead of a traditional graduation party I would jump out of an airplane! How exciting!');
+}
+else{
+  alert('You must answer yes or no.');
 }
 
 var question_two = prompt('Do I have any pets?');
@@ -19,10 +22,12 @@ if (question_two.toLowerCase() === 'yes'){
   console.log('user answered correctly ' + quesion_two );
   alert('You must know Wally and Joey, my two doggos! ');
 }
-else {
+else if (question_two.toLowerCase() === 'no'){
   console.log('user ansered incorrectly ' + question_two + ', advised history.');
   alert('I actually have two dogs - Wally and Joey. Wally is smart as a whip but a little needy. Joey is super goofy sometimes and has earned the nickname \'Doey\'. ');
-
+}
+else{
+  alert('You must answer yes or no.');
 }
 
 var question_three = prompt('Do I have any kids?');
@@ -30,9 +35,12 @@ if (question_three.toLowerCase() === 'yes'){
   console.log('user answered incorrectly ' + question_three + ', advised history.');
   alert('I do not! Not yet anyway.');
 }
-else {
+else if (question_three.toLowerCase() === 'no'){
   console.log('user answered correctly ' + question_three );
   alert(' You are right! Not yet anyway.');
+}
+else{
+  alert('You must answer yes or no.');
 }
 
 var question_four = prompt('Have I always worked in the tech industry?');
@@ -40,9 +48,12 @@ if (question_four.toLowerCase() === 'yes'){
   console.log('user answered incorrectly ' + question_four + ', advised history.');
   alert('I actually started as a regular old Infantry man in the Army. After that I worked for Proctor and Gamble as line technician for 2 years - Also worked at GoDaddy as a Sales and Support Inbound representative. GoDaddy is what got me seriously invested in the tech industry.');
 }
-else{
+else if (question_four.toLowerCase() === 'no'){
   console.log('user answered correctly ' + question_four );
   alert('Correct! I did many things before finding my love of code. I started as a regular old Infantry man in the Army. After that I worked for Proctor and Gamble as line technician for 2 years - Also worked at GoDaddy as a Sales and Support Inbound representative. GoDaddy is what got me seriously invested in the tech industry.');
+}
+else{
+  alert('You must answer yes or no.');
 }
 
 var question_five = prompt('Have I always been this good looking?');
@@ -50,7 +61,10 @@ if (question_five.toLowerCase() === 'yes'){
   console.log('user answered correctly ' + question_five );
   alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
 }
-else{
+else if (question_five.toLowerCase() === 'yes'){
   console.log('user answered incorrectly ' + question_five + ', advised history.');
   alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+}
+else{
+  alert('You must answer yes or no.');
 }
