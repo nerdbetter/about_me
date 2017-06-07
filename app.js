@@ -22,7 +22,7 @@ while (question_one.toLowerCase() !== 'yes' && question_one.toLowerCase() !== 'n
 do{
   var question_two = prompt('Do I have any pets?');
   if (question_two.toLowerCase() === 'yes'){
-    console.log('user answered correctly ' + quesion_two );
+    console.log('user answered correctly ' + question_two );
     alert('You must know Wally and Joey, my two doggos! ');
   }
   else if (question_two.toLowerCase() === 'no'){
