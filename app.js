@@ -79,3 +79,30 @@ do{
   }
 }
 while (question_five.toLowerCase() !== 'yes' && question_five.toLowerCase() !== 'no' );
+//This next part id the number guessing game//
+var i = 0;
+for (i = 0; i < 5; i++){
+  var number_guess = prompt('What is my favorite number? You get exactly 5 guesses.');
+  var favorite_number = 413;
+  if (parseInt(number_guess) === favorite_number){
+    alert('How did you know that!?');
+    console.log('user guessed number correcty');
+    break;
+  }
+  else if (Number.isInteger(parseInt(number_guess)) === false ){
+    alert('You were supposed to guess a number!');
+    console.log('user did not guess a number');
+  }
+  else{
+    alert('That is not correct');
+    console.log('user guessed '
+    + number_guess
+    + ' ,That was incorrect');
+    if (parseInt(number_guess) < favorite_number){
+      alert('You need to guess higher!');
+    }
+    else{
+      alert('You need to guess lower!');
+    }
+  }
+}
