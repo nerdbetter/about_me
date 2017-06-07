@@ -106,43 +106,22 @@ for (i = 0; i < 3; i++){
     }
   }
 }
-var lived = ['California', 'North Carolina', 'Mississippi', 'Florida' ];
-var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
-i = 0;
-
-do{
-  var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
-  for(x = 0; x < lived.length; x++){
-    lived[x] = lived[x].toUpperCase();
-  }
-  for(x = 0; x < array2.length; x++){
-    us_states[x] = us_states[x].toUpperCase();
-  }
-  i = 0;
-  for (var x = 0; x < lived.length; x++) {
-    if (states_guess === lived[x]){
-      alert('That\'s correct! I\'ve also lived in '
-      + lived[x]
-      + 'mostly as a child and when I was in the service. I consider Iowa my home!')
-    }
-  }
 
 var lived = ['California', 'North Carolina', 'Mississippi', 'Florida' ];
 var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
-'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
-'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+  'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
+  'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
 
 var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
 
 for (x = 0; x < lived.length; x++) {
   if (states_guess === lived[x]){
-    alert('That\'s correct! I\'ve also lived in ' + lived + ' ,mostly as a child and when I was in the service. I consider Iowa my home!')
-
+    alert('That\'s correct! I\'ve also lived in ' + lived + ' ,mostly as a child and when I was in the service. I consider Iowa my home!');
   }
   else if (states_guess !== us_states[x]){
-    alert('That is not a state!')
+    alert('That is not a state!, Guess again!');
   }
   else {
-    alert('not correct')
+    alert('I have not lived there, try again!');
   }
 }
