@@ -82,7 +82,7 @@ while (question_five.toLowerCase() !== 'yes' && question_five.toLowerCase() !== 
 //This next part id the number guessing game//
 var i = 0;
 for (i = 0; i < 3; i++){
-  var number_guess = prompt('What is my favorite number? You get exactly 5 guesses.');
+  var number_guess = prompt('What is my favorite number? You get exactly 4 guesses.');
   var favorite_number = 413;
   if (parseInt(number_guess) === favorite_number){
     alert('How did you know that!?');
@@ -111,17 +111,22 @@ var lived = ['California', 'North Carolina', 'Mississippi', 'Florida' ];
 var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
   'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
   'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
-
-var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
-
-for (x = 0; x < lived.length; x++) {
-  if (states_guess === lived[x]){
-    alert('That\'s correct! I\'ve also lived in ' + lived + ' ,mostly as a child and when I was in the service. I consider Iowa my home!');
+i = 0;
+while ( i < 5){
+  var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
+  if (lived.indexOf(states_guess) === 0){
+    alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
+    break;
   }
-  else if (states_guess !== us_states[x]){
+  else if (us_states.indexOf(states_guess) == -1 ){
     alert('That is not a state!, Guess again!');
+    i++;
+  }
+  else if (i >= 5){
+    alert('Nice try, I have lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
   }
   else {
     alert('I have not lived there, try again!');
+    i++;
   }
 }
