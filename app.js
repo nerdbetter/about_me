@@ -1,7 +1,7 @@
 'use strict';
 
 console.log('loaded app.js');
-user_correct = 0;
+var user_correct = 0;
 var user_name = prompt('Who do I have the pleasure of speaking with today?');
 alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
 do{
@@ -79,7 +79,7 @@ do{
     alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
     user_correct++;
   }
-  else if (question_five.toLowerCase() === 'yes'){
+  else if (question_five.toLowerCase() === 'no'){
     console.log('user answered incorrectly ' + question_five + ', advised history.');
     alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
   }
@@ -87,7 +87,7 @@ do{
 while (question_five.toLowerCase() !== 'yes' && question_five.toLowerCase() !== 'no' );
 //This next part id the number guessing game//
 var i = 0;
-for (i = 0; i < 3; i++){
+for (i = 0; i < 4; i++){
   var number_guess = prompt('What is my favorite number? You get exactly 4 guesses.');
   var favorite_number = 413;
   if (parseInt(number_guess) === favorite_number){
@@ -119,7 +119,7 @@ var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','Calif
   'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
   'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
 i = 0;
-while ( i < 5){
+while ( i < 7){
   var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
   if (lived.indexOf(states_guess) === 0){
     alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
@@ -130,7 +130,7 @@ while ( i < 5){
     alert('That is not a state!, Guess again!');
     i++;
   }
-  else if (i >= 5){
+  else if (i >= 6){
     alert('Nice try, I have lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
   }
   else {
