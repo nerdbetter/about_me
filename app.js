@@ -4,12 +4,14 @@ console.log('loaded app.js');
 var user_correct = 0;
 var user_name = prompt('Who do I have the pleasure of speaking with today?');
 alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
-do{
+
+function question_one(){
   var question_one = prompt('Have I ever been Skydiving?');
   if (question_one.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_one );
     alert('How did you know? I would love to get the opportunity to go again.');
     user_correct++;
+
   }
   else if (question_one.toLowerCase() === 'no'){
     console.log('user ansered incorrectly ' + question_one + ', advised history.');
@@ -19,9 +21,7 @@ do{
     alert('You must answer yes or no.');
   }
 }
-while (question_one.toLowerCase() !== 'yes' && question_one.toLowerCase() !== 'no' );
-
-do{
+function question_two(){
   var question_two = prompt('Do I have any pets?');
   if (question_two.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_two );
@@ -36,9 +36,7 @@ do{
     alert('You must answer yes or no.');
   }
 }
-while (question_two.toLowerCase() !== 'yes' && question_two.toLowerCase() !== 'no' );
-
-do{
+function question_three(){
   var question_three = prompt('Do I have any kids?');
   if (question_three.toLowerCase() === 'yes'){
     console.log('user answered incorrectly ' + question_three + ', advised history.');
@@ -53,9 +51,7 @@ do{
     alert('You must answer yes or no.');
   }
 }
-while (question_three.toLowerCase() !== 'yes' && question_three.toLowerCase() !== 'no' );
-
-do{
+function question_four(){
   var question_four = prompt('Have I always worked in the tech industry?');
   if (question_four.toLowerCase() === 'yes'){
     console.log('user answered incorrectly ' + question_four + ', advised history.');
@@ -70,22 +66,19 @@ do{
     alert('You must answer yes or no.');
   }
 }
-while (question_four.toLowerCase() !== 'yes' && question_four.toLowerCase() !== 'no' );
-
-do{
+function question_five(){
   var question_five = prompt('Have I always been this good looking?');
   if (question_five.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_five );
-    alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+    alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me
     user_correct++;
   }
   else if (question_five.toLowerCase() === 'no'){
     console.log('user answered incorrectly ' + question_five + ', advised history.');
-    alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+    alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me
   }
 }
-while (question_five.toLowerCase() !== 'yes' && question_five.toLowerCase() !== 'no' );
-//This next part id the number guessing game//
+//This next part id the number guessing game
 var i = 0;
 for (i = 0; i < 4; i++){
   var number_guess = prompt('What is my favorite number? You get exactly 4 guesses.');
