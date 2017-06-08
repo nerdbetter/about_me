@@ -1,6 +1,7 @@
 'use strict';
 
 console.log('loaded app.js');
+user_correct = 0;
 var user_name = prompt('Who do I have the pleasure of speaking with today?');
 alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
 do{
@@ -8,6 +9,7 @@ do{
   if (question_one.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_one );
     alert('How did you know? I would love to get the opportunity to go again.');
+    user_correct++;
   }
   else if (question_one.toLowerCase() === 'no'){
     console.log('user ansered incorrectly ' + question_one + ', advised history.');
@@ -24,6 +26,7 @@ do{
   if (question_two.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_two );
     alert('You must know Wally and Joey, my two doggos! ');
+    user_correct++;
   }
   else if (question_two.toLowerCase() === 'no'){
     console.log('user ansered incorrectly ' + question_two + ', advised history.');
@@ -44,6 +47,7 @@ do{
   else if (question_three.toLowerCase() === 'no'){
     console.log('user answered correctly ' + question_three );
     alert(' You are right! Not yet anyway.');
+    user_correct++;
   }
   else{
     alert('You must answer yes or no.');
@@ -60,6 +64,7 @@ do{
   else if (question_four.toLowerCase() === 'no'){
     console.log('user answered correctly ' + question_four );
     alert('Correct! I did many things before finding my love of code. I started as a regular old Infantry man in the Army. After that I worked for Proctor and Gamble as line technician for 2 years - Also worked at GoDaddy as a Sales and Support Inbound representative. GoDaddy is what got me seriously invested in the tech industry.');
+    user_correct++;
   }
   else{
     alert('You must answer yes or no.');
@@ -72,6 +77,7 @@ do{
   if (question_five.toLowerCase() === 'yes'){
     console.log('user answered correctly ' + question_five );
     alert('Heck yeah I have! Check this out!'); //somehow have an image link to old highschool photo of dorky me //
+    user_correct++;
   }
   else if (question_five.toLowerCase() === 'yes'){
     console.log('user answered incorrectly ' + question_five + ', advised history.');
@@ -87,6 +93,7 @@ for (i = 0; i < 3; i++){
   if (parseInt(number_guess) === favorite_number){
     alert('How did you know that!?');
     console.log('user guessed number correcty');
+    user_correct++;
     break;
   }
   else if (Number.isInteger(parseInt(number_guess)) === false ){
@@ -116,6 +123,7 @@ while ( i < 5){
   var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
   if (lived.indexOf(states_guess) === 0){
     alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
+    user_correct++;
     break;
   }
   else if (us_states.indexOf(states_guess) == -1 ){
@@ -130,3 +138,4 @@ while ( i < 5){
     i++;
   }
 }
+alert('Thanks ' + user_name + ' for getting to know me a little bit. You got ' + user_correct + ' questions right!');
