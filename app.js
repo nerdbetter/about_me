@@ -125,19 +125,21 @@ function question_seven(){
   var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
     'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
     'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
-  attempts = 0;
+   var attempts = 0;
   while ( attempts < 7){
     var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
-    if (lived.indexOf(states_guess) === 0){
-      alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
-      user_correct++;
-      break;
+    for (var i = 0; i < lived.length; i++){
+      if(lived[i] === states_guess){
+        alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
+        user_correct++;
+        break;
+      }
     }
-    else if (us_states.indexOf(states_guess) == -1 ){
+    if (us_states.indexOf(states_guess) == -1 ){
       alert('That is not a state!, Guess again!');
       attempts++;
     }
-    else if (i >= 6){
+    else if (attempts >= 6){
       alert('Nice try, I have lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
     }
     else {
