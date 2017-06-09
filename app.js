@@ -143,4 +143,6 @@ function question_seven(){
     }
   }
 }
-alert('Thanks ' + user_name + ' for getting to know me a little bit. You got ' + user_correct + ' questions right!');
+function score(){
+  alert('Thanks ' + user_name + ' for getting to know me a little bit. You got ' + user_correct + ' questions right!');
+}
