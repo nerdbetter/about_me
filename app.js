@@ -11,7 +11,7 @@ question_three();
 question_four();
 question_five();
 }
-function(){
+function prompt_user(){
   user_name = prompt('Who do I have the pleasure of speaking with today?');
   alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
 }
