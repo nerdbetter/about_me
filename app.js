@@ -127,9 +127,9 @@ function question_seven(){
     'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
    var attempts = 0;
   while ( attempts < 7){
-    var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?');
+    var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?').toLowerCase();
     for (var i = 0; i < lived.length; i++){
-      if(lived[i] === states_guess){
+      if(lived[i].toLowerCase() === states_guess){
         alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
         user_correct++;
         break;
