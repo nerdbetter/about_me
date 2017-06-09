@@ -89,8 +89,7 @@ function question_five(){
   }
 }
 //This next part id the number guessing game
-var i = 0;
-for (i = 0; i < 4; i++){
+for (var i = 0; i < 4; i++){
   var number_guess = prompt('What is my favorite number? You get exactly 4 guesses.');
   var favorite_number = 413;
   if (parseInt(number_guess) === favorite_number){
