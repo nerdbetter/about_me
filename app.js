@@ -10,6 +10,9 @@ question_two();
 question_three();
 question_four();
 question_five();
+question_six();
+question_seven();
+score();
 }
 function prompt_user(){
   user_name = prompt('Who do I have the pleasure of speaking with today?');
