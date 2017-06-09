@@ -126,16 +126,21 @@ function question_seven(){
     'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
     'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
    var attempts = 0;
+   var isCorrect = false;
   while ( attempts < 7){
     var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?').toLowerCase();
     for (var i = 0; i < lived.length; i++){
       if(lived[i].toLowerCase() === states_guess){
         alert('That\'s correct! I\'ve lived in ' + lived + ' .Although I moved around a bit as a child and in the service, I consider Iowa my home!');
         user_correct++;
+        isCorrect = true;
         break;
       }
     }
-    if (us_states.indexOf(states_guess) == -1 ){
+    if(isCorrect){
+      break;
+    }
+    else if (us_states.indexOf(states_guess) == -1 ){
       alert('That is not a state!, Guess again!');
       attempts++;
     }
