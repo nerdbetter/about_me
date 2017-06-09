@@ -3,7 +3,11 @@
 console.log('loaded app.js');
 var user_correct = 0;
 function main(){
-
+question_one();
+question_two();
+question_three();
+question_four();
+question_five();
 }
 var user_name = prompt('Who do I have the pleasure of speaking with today?');
 alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
