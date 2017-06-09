@@ -2,16 +2,19 @@
 
 console.log('loaded app.js');
 var user_correct = 0;
+var user_name;
 function main(){
+prompt_user();
 question_one();
 question_two();
 question_three();
 question_four();
 question_five();
 }
-var user_name = prompt('Who do I have the pleasure of speaking with today?');
-alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
-
+function(){
+  user_name = prompt('Who do I have the pleasure of speaking with today?');
+  alert('Howdy ' + user_name + '! My name is Jason Logan, and today you will learn a few things about me from a simple Yes or No question game.');
+}
 function question_one(){
   var question_one = prompt('Have I ever been Skydiving?');
   if (question_one.toLowerCase() === 'yes'){
