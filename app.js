@@ -4,15 +4,15 @@ console.log('loaded app.js');
 var user_correct = 0;
 var user_name;
 function main(){
-prompt_user();
-question_one();
-question_two();
-question_three();
-question_four();
-question_five();
-question_six();
-question_seven();
-score();
+  prompt_user();
+  question_one();
+  question_two();
+  question_three();
+  question_four();
+  question_five();
+  question_six();
+  question_seven();
+  score();
 }
 function prompt_user(){
   user_name = prompt('Who do I have the pleasure of speaking with today?');
@@ -125,8 +125,8 @@ function question_seven(){
   var us_states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands',
     'Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota',
     'Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
-   var attempts = 0;
-   var isCorrect = false;
+  var attempts = 0;
+  var isCorrect = false;
   while ( attempts < 7){
     var states_guess = prompt('I have lived in four states other than Iowa, can you guess one?').toLowerCase();
     for (var i = 0; i < lived.length; i++){
@@ -140,7 +140,7 @@ function question_seven(){
     if(isCorrect){
       break;
     }
-    else if (us_states.indexOf(states_guess) == -1 ){
+    else if (us_states.indexOf(states_guess.toLowerCase()) == -1 ){
       alert('That is not a state!, Guess again!');
       attempts++;
     }
