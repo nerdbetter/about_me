@@ -1,22 +1,35 @@
 body {
-  background: grey
+  background: white;
 }
 
 h1{
   text-align: center;
-  color: goldenrod;
+  color: navy;
+
 
 }
+nav{
+
+}
+nav ul li{
+  display: inline-block;
+  background-color:orange;
+  padding: 100px;
+  border: 20px;
+  border-radius: 10px;
+}
 nav ul {
+
   list-style-type: none;
-  display: inline;
   text-align: center;
+  color: white;
+
 
 
 }
 
 nav a {
-  display: block;
+
   color: ffab38;
   text-align: center;
   padding: 14px 16px;
@@ -25,4 +38,4 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #111;
+}
