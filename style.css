@@ -1,41 +1,82 @@
 body {
   background: white;
 }
-
 h1{
   text-align: center;
   color: navy;
-
-
-}
-nav{
-
 }
 nav ul li{
   display: inline-block;
+
+}
+nav ul li.homeIndex{
+  background-image: url("images/joeyUpsidedown.jpg");
+  background-size: 100%;
   background-color:orange;
-  padding: 100px;
-  border: 20px;
-  border-radius: 10px;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-size: 100%;
+  text-align: center;
+
+
+}
+nav ul li.homeGame{
+  background-image: url("images/joeyUpsidedown.jpg");
+  background-size: 100%;
+  background-color:orange;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-size: 100%;
+  text-align: center;
+
+
+}
+nav ul li.homeTopTen{
+  background-image: url("images/joeyUpsidedown.jpg");
+  background-size: 100%;
+  background-color:orange;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-size: 100%;
+  text-align: center;
+}
+nav ul li.homeExperience{
+  background-image: url("images/joeyUpsidedown.jpg");
+  background-size: 100%;
+  background-color:orange;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  background-size: 100%;
+  text-align: center;
+
+
+}
+nav ul li.homeGoals{
+  background-image: url("images/joeyUpsidedown.jpg");
+  background-size: 100%;
+  background-color:orange;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+
+}
+
 }
 nav ul {
-
-  list-style-type: none;
+  list-style-type: bold;
   text-align: center;
   color: white;
-
-
-
 }
-
 nav a {
-
-  color: ffab38;
-  text-align: center;
+  color: navy;
+  
   padding: 14px 16px;
   text-decoration: none;
   font-size: 24px;
 }
-
 nav a:hover {
 }
